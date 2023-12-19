@@ -9,9 +9,11 @@ I am not responsible for any damage that may occur as a result of running this s
 
 ## Run the scipt
 ```
-./"StartAllback Cleanup.ps1"
+./"StartAllbackCleanup.ps1"
 ```
 or 
 ```
-powershell -ExecutionPolicy Bypass -File "StartAllBack Cleanup.ps1"
+powershell -ExecutionPolicy Bypass -File "StartAllBackCleanup.ps1"
 ```
+If you don't know how to automate a powershell script with Task Scheduler, follow this:
+https://blog.netwrix.com/2018/07/03/how-to-automate-powershell-scripts-with-task-scheduler/
