@@ -15,5 +15,5 @@ or
 ```
 powershell -ExecutionPolicy Bypass -File "StartAllBackCleanup.ps1"
 ```
-If you don't know how to automate a powershell script with Task Scheduler, follow this:
+If you don't know how to automate a powershell script with Task Scheduler, follow this, for the trigger, I would set it to when you log on:
 https://blog.netwrix.com/2018/07/03/how-to-automate-powershell-scripts-with-task-scheduler/
