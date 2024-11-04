@@ -3,7 +3,10 @@
 #Wait for explorer to load what it needs to before executing. 
 #Prevents script from killing explorer too early leading to it not restarting properly.
 
-sleep -s 30
+Write-Output "Waiting for 60 seconds"
+sleep -s 60
+
+Write-Output "Cleaning StartAllBack Keys!"
 
 $keys = Get-Item -Path Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\* | Select-Object -ExpandProperty Name
 $keys = $keys | Where-Object { $_ -cmatch '\{[a-z0-9]{8}-([a-z0-9]{4}-){3}[a-z0-9]{8}.*$' }
@@ -22,3 +25,5 @@ foreach ($key in $keys) {
 }
 
 stop-process -name explorer –force
+Write-Output "Done!"
+sleep -s 2
